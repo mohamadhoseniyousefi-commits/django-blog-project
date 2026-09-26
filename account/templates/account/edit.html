@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Edit Profile
+{% endblock %}
+
+{% block content %}
+
+    <!-- Page Content -->
+    <div class="heading-page header-text">
+        <section class="page-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-content">
+                            <h4>Edit Profile</h4>
+                            <h2>Edit</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="contact-us py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="sidebar-item contact-form">
+
+                        <div class="sidebar-heading">
+                            <h2>Edit your profile</h2>
+                        </div>
+
+                        <div class="content">
+
+                            <form id="contact"
+                                  action=""
+                                  method="post"
+                                  enctype="multipart/form-data">
+
+                                {% csrf_token %}
+
+                                <div class="row">
+
+                                    <div class="col-12 mb-4">
+                                        {{ user_form.first_name }}
+                                    </div>
+
+                                    <div class="col-12 mb-4">
+                                        {{ user_form.last_name }}
+                                    </div>
+
+                                    <div class="col-12 mb-4">
+                                        {{ user_form.email }}
+                                    </div>
+
+                                    <div class="col-12 mb-4">
+                                        {{ profile_form.name_father }}
+                                    </div>
+
+                                    <div class="col-12 mb-4">
+                                        {{ profile_form.meliname }}
+                                    </div>
+
+                                    <div class="col-12 mb-4">
+                                        {{ profile_form.image }}
+                                    </div>
+
+                                    <div class="col-lg-12 mt-4">
+                                        <fieldset>
+                                            <button type="submit"
+                                                    id="form-submit"
+                                                    class="main-button">
+                                                Save
+                                            </button>
+                                        </fieldset>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+

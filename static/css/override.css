@@ -1,0 +1,10 @@
+@font-face {
+    font-family: yekan;
+    src: url("../fonts/yekan.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: yekan, sans-serif;
+}

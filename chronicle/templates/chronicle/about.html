@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="heading-page header-text">
+        <section class="page-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-content">
+                            <h4>about us</h4>
+                            <h2>more about us!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Banner Ends Here -->
+
+
+    <section class="about-us">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="{% static 'images/about-us.jpg' %}" alt="">
+                    <p>Welcome to our website. Here, we bring together a collection of cities from around the world in
+                        one place, allowing us to learn more about the cities, cultures, tourist attractions, and unique
+                        characteristics of each region.
+
+                        Our goal is to provide you with useful information about various cities through short, simple
+                        articles, helping you discover destinations for your future travels and tourism.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

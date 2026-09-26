@@ -1,0 +1,120 @@
+{% load static %}
+<header class="">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" >
+                <h2>Stand Blog<em>.</em></h2>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'home:home' %}">
+                            Home
+                        </a>
+                    </li>
+
+                     <li class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'chronicle:about' %}">About Us</a>
+                    </li>
+
+                    <li class="nav-item {% if request.resolver_match.url_name == 'list' %}active{% endif %}">
+                        <a class="nav-link" href="{% url "chronicle:list" %}">
+                            All chronicle
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home:home' %}">Post Details</a>
+                    </li>
+
+                     <li class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'chronicle:contact' %}">Contact Us</a>
+                    </li>
+
+                </ul>
+                <!-- پروفایل -->
+                <ul class="navbar-nav ml-auto">
+
+                    {% if request.user.is_authenticated %}
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle d-flex align-items-center"
+                               href="#"
+                               id="userDropdown"
+                               data-toggle="dropdown">
+
+                                {% if request.user.profile.image %}
+                                    <img src="{{ request.user.profile.image.url }}"
+                                         width="38"
+                                         height="38"
+                                         style="border-radius:50%;object-fit:cover;margin-right:8px;">
+                                {% else %}
+                                    <img src="{% static "images/icons/imgpro.png" %}"
+                                         width="38"
+                                         height="38"
+                                         style="border-radius:50%;object-fit:cover;margin-right:8px;">
+                                {% endif %}
+
+                                <span class="ml-2">
+                    {{ request.user.first_name }} {{ request.user.last_name }}
+                </span>
+
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+
+                                <a class="dropdown-item" href="{% url 'account:edit' %}">
+                                    <i class="fa fa-user"></i> Profile
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger"
+                                   href="{% url 'account:logout' %}">
+                                    <i class="fa fa-sign-out"></i> Logout
+                                </a>
+
+                            </div>
+
+                        </li>
+
+                    {% else %}
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account:login' %}">
+                                <i class="fa fa-sign-in mr-1"></i>
+                                Login
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account:register' %}">
+                                <i class="fa fa-user-plus mr-1"></i>
+                                Register
+                            </a>
+                        </li>
+
+                    {% endif %}
+
+                </ul>
+
+
+            </div>
+
+        </div>
+    </nav>
+</header>
