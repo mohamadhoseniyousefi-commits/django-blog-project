@@ -1,52 +1,102 @@
-# Django Blog Project
+Django Blog Project
 
-A blog project built with Django.
+A full-featured blog application developed with Django.
 
-## About The Project
+این پروژه یک سامانه وبلاگ است که با استفاده از فریم‌ورک Django طراحی و توسعه داده شده است.
 
-This project is a blog website developed using Django.
-It includes user authentication, blog posts, categories, comments,
-search functionality, likes, user profiles, and an admin panel.
+هدف اصلی پروژه، پیاده‌سازی عملی مفاهیم توسعه وب با Django و ایجاد یک ساختار واقعی و قابل توسعه بوده است.
 
-## Features
+در این پروژه علاوه بر طراحی رابط کاربری، بخش‌های مختلف سمت سرور، مدیریت کاربران، مدیریت مطالب، نظرات، جستجو و پنل مدیریت
+نیز پیاده‌سازی شده‌اند.
 
-- User registration and login
-- User profile
-- Create and manage blog posts
-- Blog categories
-- Post details
-- Search posts
-- Comments and replies
-- Like posts
-- Admin panel
-- Custom admin styling
-- Pagination
-- Static files and custom fonts
-- Media file support
+قابلیت‌های پروژه
 
-## Technologies
+• ثبت‌نام و ورود کاربران
+• مدیریت پروفایل کاربران
+• ایجاد و مدیریت مطالب
+• دسته‌بندی مطالب
+• نمایش جزئیات مطالب
+• جستجوی مطالب
+• ثبت نظر برای مطالب
+• پاسخ به نظرات
+• سیستم لایک مطالب
+• صفحه‌بندی مطالب
+• پنل مدیریت
+• شخصی‌سازی پنل مدیریت
+• مدیریت فایل‌های استاتیک
+• مدیریت فایل‌های رسانه‌ای
+• استفاده از فونت‌های سفارشی
 
-- Python
-- Django
-- SQLite
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
+مهارت‌ها و مفاهیم استفاده‌شده
 
-## Project Structure
+در توسعه این پروژه، مفاهیم زیر به صورت عملی مورد استفاده قرار گرفته‌اند:
 
-```text
-django-blog-project/
-│
-├── account/
-├── blog_project/
-├── chronicle/
-├── context_processors/
-├── home/
-├── static/
-├── templates/
-├── manage.py
-├── requirements.txt
-├── .gitignore
-└── README.md
+• طراحی و پیاده‌سازی مدل‌ها
+• ایجاد ارتباط بین مدل‌ها
+• طراحی و مدیریت فرم‌ها
+• استفاده از Viewهای مختلف
+• استفاده از Templateها
+• کار با Template Tagها
+• پیاده‌سازی سیستم احراز هویت کاربران
+• مدیریت Session
+• کار با QuerySetها
+• فیلتر و جستجوی اطلاعات
+• پیاده‌سازی Pagination
+• استفاده و شخصی‌سازی پنل مدیریت
+• مدیریت فایل‌های Static و Media
+• استفاده از Migrationها
+• ساختاردهی اپلیکیشن‌های Django
+• مدیریت وابستگی‌های پروژه
+• استفاده از Git و GitHub برای کنترل نسخه
+
+
+
+
+
+
+پروژه به چند اپلیکیشن و بخش مجزا تقسیم شده است تا ساختار آن منظم، قابل فهم و قابل توسعه باشد.
+
+بخش حساب کاربری برای مدیریت کاربران، ثبت‌نام، ورود و پروفایل استفاده شده است.
+
+بخش وبلاگ وظیفه مدیریت مطالب، دسته‌بندی‌ها، نظرات، پاسخ‌ها، جستجو و لایک‌ها را بر عهده دارد.
+
+بخش خانه برای صفحات اصلی وب‌سایت استفاده شده است.
+
+همچنین فایل‌های قالب، فایل‌های استاتیک و سایر بخش‌های مورد نیاز پروژه به صورت جداگانه سازمان‌دهی شده‌اند.
+
+نحوه نصب و اجرای پروژه
+
+ابتدا پروژه را از GitHub دریافت کنید.
+
+سپس وارد پوشه پروژه شوید.
+
+یک محیط مجازی برای پروژه ایجاد کنید و آن را فعال کنید.
+
+بعد از فعال‌سازی محیط مجازی، وابستگی‌های پروژه را با استفاده از فایل requirements.txt نصب کنید.
+
+سپس Migrationهای پروژه را اجرا کنید.
+
+در نهایت سرور توسعه Django را اجرا کنید.
+
+پس از اجرای سرور، پروژه از طریق آدرس زیر در دسترس خواهد بود:
+
+http://127.0.0.1:8000/
+
+پنل مدیریت
+
+برای استفاده از پنل مدیریت Django ابتدا یک کاربر مدیر ایجاد کنید.
+
+پس از ایجاد کاربر مدیر، می‌توانید از طریق آدرس زیر وارد پنل مدیریت شوید:
+
+http://127.0.0.1:8000/admin/
+
+
+
+
+سازنده پروژه
+
+Mohammad H. Yousefi
+
+GitHub:
+
+https://github.com/mohamadhoseniyousefi-commits
